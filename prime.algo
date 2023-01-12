@@ -1,0 +1,22 @@
+ALGORITHM prime
+VAR
+    n,i: INTEGER;
+    isPrime: BOOLEAN; 
+BEGIN
+   isPrime := TRUE;
+   REPEAT
+    Write("Donner un entier different de 1 et different de 0")
+    Read("n")
+   UNTIL (n<>0 AND n <>1)  
+   FOR i FROM 2 TO n-1 STEP 1  DO
+    IF (n%i=0) THEN
+            isPrime:=FALSE;
+            BREAK
+    END_IF
+   END_FOR 
+   IF (isPrime=TRUE) THEN
+    Write("n est premier")
+   ELSE
+    Write("n n'est pas premier")
+   END_IF
+END
